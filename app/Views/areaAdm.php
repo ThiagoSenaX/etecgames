@@ -1,4 +1,4 @@
 <br>
 <br>
 <br>
-<p>Área Administrativa</p>
+<p class="cor">Área Administrativa</p>

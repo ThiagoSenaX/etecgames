@@ -1,13 +1,13 @@
 <br />
-<h1 class="text-center mb-0 fw-bold bg-info p-3 border border-dark rounded-top">Buscar Usuário</h1>
-<div class="container border border-dark rounded-bottom p-4 bg-light">
+<div class="formulario">
+<h1 class="text-center fw-bold">Buscar Usuário</h1>
     <form method="Post">
         <div>
             <label for="codusu" class="form-label">Digite o código do Usuário:</label>
             <input type="number" name="codUsu" id="codusu" class="form-control" placeholder="Exemplo: 123">
         </div>
-        <div class="d-grid gap-2 mt-4 mb-5">
-            <button type="submit" class="btn btn-secondary">Buscar</button>
+        <div class="d-grid gap-2 mt-4 mb-4">
+            <button type="submit" class="btn btn-success">Buscar</button>
         </div>
     </form>
     <?php 
@@ -19,8 +19,8 @@
 
     <hr>
     
-    <table class="table border border-dark rounded-3 p-5 mt-5 bg-white">
-        <thead>
+    <table class="table rounded-3 p-5 mt-4 bg-white">
+        <thead class="bg-secondary text-white">
             <th>Código</th>
             <th>Email</th>
             <th>Alterar</th>
@@ -84,7 +84,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <script>
     var alterarUsuModal = document.getElementById('alterarUsuModal')
     alterarUsuModal.addEventListener('show.bs.modal', function(event) {

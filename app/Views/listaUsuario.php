@@ -1,35 +1,37 @@
-<div class="container p-0 border border-dark rounded-3">
-    <table class="table table-striped">
-        <thead class="table-dark">
-            <th>Código</th>
-            <th>Email</th>
-            <th>Alterar</th>
-            <th>Excluir</th>
-        </thead>
-        <tbody>
-            <?php foreach ($usuarios as $usuario) : ?>
-                <tr>
-                    <td><?php echo ($usuario->codusu) ?></td>
-                    <td><?php echo ($usuario->emailUsu) ?></td>
-                    <td>
-                        <!-- <form method="POST">
-                            <input type="hidden" name="codUsuAlterar" value="<?php //echo ($usuario->codusu) ?>">
+<br/>
+<table class="table rounded-3 mt-4 table-striped bg-light">
+    <thead class="bg-primary text-white">
+        <th>Código</th>
+        <th>Email</th>
+        <th>Alterar</th>
+        <th>Excluir</th>
+    </thead>
+    <tbody>
+        <?php foreach ($usuarios as $usuario) : ?>
+            <tr>
+                <td><?php echo ($usuario->codusu) ?></td>
+                <td><?php echo ($usuario->emailUsu) ?></td>
+                <td>
+                    <!-- <form method="POST">
+                            <input type="hidden" name="codUsuAlterar" value="<?php //echo ($usuario->codusu) 
+                                                                                ?>">
                             <button type="submit" class="btn btn-warning">Alterar</button>
                         </form> -->
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#alterarUsuModal" codigo="<?php echo ($usuario->codusu); ?>" email='<?php echo ($usuario->emailUsu) ?>'>Alterar</button>
-                    </td>
-                    <td>
-                        <!-- <form method="POST">
-                            <input type="hidden" name="codUsu" value="<?php //echo ($usuario->codusu) ?>">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#alterarUsuModal" codigo="<?php echo ($usuario->codusu); ?>" email='<?php echo ($usuario->emailUsu) ?>'>Alterar</button>
+                </td>
+                <td>
+                    <!-- <form method="POST">
+                            <input type="hidden" name="codUsu" value="<?php //echo ($usuario->codusu) 
+                                                                        ?>">
                             <button type="submit" class="btn btn-danger">Deletar</button>
                         </form> -->
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletarUsuModal" codigo="<?php echo ($usuario->codusu); ?>" email='<?php echo ($usuario->emailUsu) ?>'>Deletar</button>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletarUsuModal" codigo="<?php echo ($usuario->codusu); ?>" email='<?php echo ($usuario->emailUsu) ?>'>Deletar</button>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
 
 <div class="modal fade" id="alterarUsuModal" tabindex="-1" aria-labelledby="alterarUsuModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -108,7 +110,7 @@
 
         var modalTitle = deletarUsuModal.querySelector('.modal-title');
         modalTitle.textContent = 'Tem certeza que deseja excluir o usuario ' + email + '?';
-    
+
         var Codigo = deletarUsuModal.querySelector('.modal-footer .codigo');
         Codigo.value = codigo;
 
@@ -116,3 +118,4 @@
         //Email.value = email;
     })
 </script>
+</div>
