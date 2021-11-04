@@ -58,6 +58,9 @@
             box-shadow: 0px 0px 15px #000000;
             text-shadow: 1px 1px 5px #00000050;
         }
+        span{
+            color: #0099ff;
+        }
     </style>
     <title>Area Administrativa</title>
 </head>
@@ -68,7 +71,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-white">
             <div class="container-fluid">
                 <a class="navbar-brand ms-5" href="#">
-                    <h2 class="w-75">EtecGames</h2>
+                    <h2 class="w-75"><b>Etec</b><span>Games</span></h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -76,16 +79,16 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto me-5">
                         <li class="nav-item">
-                            <a class="cu nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="cu nav-link active" aria-current="page" href="<?php echo base_url('#') ?>">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Funcionário
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Cadastro</a></li>
-                                <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-                                <li><a class="dropdown-item" href="#">Alterar/Deletar</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/listaCodFuncionario') ?>">Cadastro</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/buscaPrincipalFuncionarioCod') ?>">Pesquisar por Código</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/listaCodFuncionario') ?>">Pesquisar por Nome</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
