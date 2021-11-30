@@ -35,12 +35,25 @@
             box-shadow: 0px 0px 15px #000000;
             text-shadow: 1px 1px 5px #00000050;
         }
+        .formularioroxo {
+            background: linear-gradient(#6A5ACD, #6959CD);
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+            min-width: 320px;
+            min-height: 40vh;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px #000000;
+            text-shadow: 1px 1px 5px #00000050;
+        }
         .formulariogrande {
             background: linear-gradient(#0099ff, #34aeff);
             color: white;
             margin-left: auto;
             margin-right: auto;
-            width: 900px;
+            width: 1115px;
             min-width: 320px;
             min-height: 40vh;
             padding: 2rem;

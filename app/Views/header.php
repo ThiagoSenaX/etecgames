@@ -5,63 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="../../public/css/stylesheet.css" rel="stylesheet" type="text/css" /> -->
+    <link href="<?php echo base_url('/css/style.css') ?>" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="<?php echo base_url("img/gamepad.png")?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-
-        * {
-            margin: 0;
-            border: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-
-        }
-
-        body {
-            background-image: url(https://cdn.wallpapersafari.com/41/72/DqcEei.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            min-width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .formulario {
-            background: linear-gradient(#0099ff, #34aeff);
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            width: 600px;
-            min-width: 320px;
-            min-height: 40vh;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 0px 15px #000000;
-            text-shadow: 1px 1px 5px #00000050;
-        }
-        .formulariogrande {
-            background: linear-gradient(#0099ff, #34aeff);
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            width: 900px;
-            min-width: 320px;
-            min-height: 40vh;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 0px 15px #000000;
-            text-shadow: 1px 1px 5px #00000050;
-        }
-        span{
-            color: #0099ff;
-        }
-    </style>
     <title>Area Administrativa</title>
 </head>
 
@@ -87,8 +33,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/listaCodFuncionario') ?>">Cadastro</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/buscaPrincipalFuncionarioCod') ?>">Pesquisar por Código</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/listaCodFuncionario') ?>">Pesquisar por Nome</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('./FuncionarioController/buscaPrincipalFuncionario') ?>">Pesquisar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

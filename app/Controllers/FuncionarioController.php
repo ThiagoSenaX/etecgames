@@ -54,11 +54,20 @@ Class FuncionarioController extends BaseController{
         echo view('footer');
     }
 
-    public function buscaPrincipalFuncionarioCod(){
+    public function buscaPrincipalFuncionario(){
         $request = service('request');
         $codfuncionario = $request->getPost('codFun');
+        $nomefuncionario = $request->getPost('nomeFuncionario')?$request->getPost('nomeFuncionario'):"";
         $FuncionarioModel = new \App\Models\FuncionarioModel();
+
+        if($codfuncionario){
         $registros = $FuncionarioModel->find($codfuncionario);
+        //var_dump($registros);
+        }else{
+        $registros = $FuncionarioModel->like('nomeFun', $nomefuncionario)->find();
+        //var_dump($registros);
+        }
+
 
         if($request->getPost('codFunDeletar')) {
 			$this->funcionarioExcluir($request->getPost('codFunDeletar'));
@@ -72,7 +81,7 @@ Class FuncionarioController extends BaseController{
         $data['funcionario'] = $registros;
 
         echo view('header');
-        echo view('buscaCodigoFuncionario', $data);
+        echo view('buscaFuncionario', $data);
         echo view('footer');
     }
 
@@ -111,5 +120,6 @@ Class FuncionarioController extends BaseController{
 
         $data['funcionario'] = $registros;
     }
+
 }
 
